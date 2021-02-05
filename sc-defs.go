@@ -2,8 +2,8 @@
 // Use of this source code is governed by licenses granted by the
 // copyright holder including that found in the LICENSE file.
 
-// Safecast API data structures
-package TTDefs
+// Package ttdefs defines the core Safecast API data structures
+package ttdefs
 
 // Loc is Device Location Data
 type Loc struct {
@@ -55,6 +55,8 @@ type Lnd struct {
 	U712 *float64 `json:"lnd_712u,omitempty"`
 	// Water-attenuated LND LND 78017
 	W78017 *float64 `json:"lnd_78017w,omitempty"`
+	// Device-computed uSV/h
+	USv *float64 `json:"lnd_usv,omitempty"`
 }
 
 // Pms is for Plantower Air Sensor Data
