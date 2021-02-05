@@ -1,3 +1,3 @@
-module github.com/Safecast/TTDefs
+module github.com/Safecast/ttdefs
 
 go 1.15
