@@ -120,6 +120,7 @@ type Opc struct {
 // Dev contains General Device Statistics
 type Dev struct {
 	Test                  *bool    `json:"dev_test,omitempty"`
+	Indoors               *bool    `json:"dev_indoors,omitempty"`
 	Motion                *bool    `json:"dev_motion,omitempty"`
 	DeviceLabel           *string  `json:"dev_label,omitempty"`
 	UptimeMinutes         *uint32  `json:"dev_uptime,omitempty"`
