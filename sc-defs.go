@@ -114,6 +114,7 @@ type Pms struct {
 	Model      *string  `json:"pms_model,omitempty"`
 	AqiNotes   *string  `json:"pms_aqi_notes,omitempty"`
 	AqiLevel   *string  `json:"pms_aqi_level,omitempty"`
+	AqiPm      *float64 `json:"pms_aqi_pm,omitempty"`
 	Aqi        *uint32  `json:"pms_aqi,omitempty"`
 }
 
@@ -139,6 +140,7 @@ type Pms2 struct {
 	Model      *string  `json:"pms2_model,omitempty"`
 	AqiNotes   *string  `json:"pms2_aqi_notes,omitempty"`
 	AqiLevel   *string  `json:"pms2_aqi_level,omitempty"`
+	AqiPm      *float64 `json:"pms2_aqi_pm,omitempty"`
 	Aqi        *uint32  `json:"pms2_aqi,omitempty"`
 }
 
@@ -163,6 +165,7 @@ type Opc struct {
 	Pm10_0cf1  *float64 `json:"opc_pm10_0_cf1,omitempty"`
 	AqiNotes   *string  `json:"opc_aqi_notes,omitempty"`
 	AqiLevel   *string  `json:"opc_aqi_level,omitempty"`
+	AqiPm      *float64 `json:"opc_aqi_pm,omitempty"`
 	Aqi        *uint32  `json:"opc_aqi,omitempty"`
 }
 
