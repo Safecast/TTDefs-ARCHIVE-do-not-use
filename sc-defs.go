@@ -59,6 +59,39 @@ type Lnd struct {
 	USv *float64 `json:"lnd_usv,omitempty"`
 }
 
+// AqiUSEPAHumidity (PM is not humidity-adjusted according to US)
+const AqiUSEPAHumidity string = "us-epa-humidity"
+
+// AqiCF1 (PM is "cf1" (which means no conversion))
+const AqiCF1 string = "cf-1"
+
+// AqiCFATM (PM is "atmostpheric" conversion factor)
+const AqiCFATM string = "cf-atm"
+
+// AqiCFEN481 (PM is European Standard EN-481)
+const AqiCFEN481 string = "cf-en481"
+
+// AqiLevelGood (golint)
+const AqiLevelGood string = "good"
+
+// AqiLevelModerate (golint)
+const AqiLevelModerate string = "moderate"
+
+// AqiLevelUnhealthyIfSensitive (unhealthy for sensitive groups)
+const AqiLevelUnhealthyIfSensitive string = "unhealthy-if-sensitive"
+
+// AqiLevelUnhealthy (golint)
+const AqiLevelUnhealthy string = "unhealthy"
+
+// AqiLevelVeryUnhealthy (golint)
+const AqiLevelVeryUnhealthy string = "very-unhealthy"
+
+// AqiLevelHazardous (golint)
+const AqiLevelHazardous string = "hazardous"
+
+// AqiLevelVeryHazardous (golint)
+const AqiLevelVeryHazardous string = "very-hazardous"
+
 // Pms is for Plantower Air Sensor Data
 type Pms struct {
 	Pm01_0      *float64 `json:"pms_pm01_0,omitempty"`
@@ -75,9 +108,15 @@ type Pms struct {
 	Count10_00  *uint32  `json:"pms_c10_00,omitempty"`
 	CountSecs   *uint32  `json:"pms_csecs,omitempty"`
 	Samples     *uint32  `json:"pms_csamples,omitempty"`
+	Pm01_0cf1   *float64 `json:"pms_pm01_0_cf1,omitempty"`
+	Pm02_5cf1   *float64 `json:"pms_pm02_5_cf1,omitempty"`
+	Pm10_0cf1   *float64 `json:"pms_pm10_0_cf1,omitempty"`
 	Model       *string  `json:"pms_model,omitempty"`
 	CardVoltage *float64 `json:"voltage,omitempty"`
 	CardTemp    *float64 `json:"temp,omitempty"`
+	AqiNotes    *string  `json:"aqi_notes,omitempty"`
+	AqiLevel    *string  `json:"aqi_level,omitempty"`
+	Aqi         *uint32  `json:"aqi,omitempty"`
 }
 
 // Pms2 is for an auxiliary Plantower Air Sensor Data
@@ -96,7 +135,13 @@ type Pms2 struct {
 	Count10_00 *uint32  `json:"pms2_c10_00,omitempty"`
 	CountSecs  *uint32  `json:"pms2_csecs,omitempty"`
 	Samples    *uint32  `json:"pms2_csamples,omitempty"`
+	Pm01_0cf1  *float64 `json:"pms_pm01_0_cf1,omitempty"`
+	Pm02_5cf1  *float64 `json:"pms_pm02_5_cf1,omitempty"`
+	Pm10_0cf1  *float64 `json:"pms_pm10_0_cf1,omitempty"`
 	Model      *string  `json:"pms2_model,omitempty"`
+	AqiNotes   *string  `json:"aqi_notes,omitempty"`
+	AqiLevel   *string  `json:"aqi_level,omitempty"`
+	Aqi        *uint32  `json:"aqi,omitempty"`
 }
 
 // Opc is for Alphasense OPC-N2 Air Sensor Data
@@ -115,6 +160,12 @@ type Opc struct {
 	Count10_00 *uint32  `json:"opc_c10_00,omitempty"`
 	CountSecs  *uint32  `json:"opc_csecs,omitempty"`
 	Samples    *uint32  `json:"opc_csamples,omitempty"`
+	Pm01_0cf1  *float64 `json:"pms_pm01_0_cf1,omitempty"`
+	Pm02_5cf1  *float64 `json:"pms_pm02_5_cf1,omitempty"`
+	Pm10_0cf1  *float64 `json:"pms_pm10_0_cf1,omitempty"`
+	AqiNotes   *string  `json:"aqi_notes,omitempty"`
+	AqiLevel   *string  `json:"aqi_level,omitempty"`
+	Aqi        *uint32  `json:"aqi,omitempty"`
 }
 
 // Dev contains General Device Statistics
