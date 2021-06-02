@@ -94,29 +94,27 @@ const AqiLevelVeryHazardous string = "very-hazardous"
 
 // Pms is for Plantower Air Sensor Data
 type Pms struct {
-	Pm01_0      *float64 `json:"pms_pm01_0,omitempty"`
-	Pm02_5      *float64 `json:"pms_pm02_5,omitempty"`
-	Pm10_0      *float64 `json:"pms_pm10_0,omitempty"`
-	Std01_0     *float64 `json:"pms_std01_0,omitempty"`
-	Std02_5     *float64 `json:"pms_std02_5,omitempty"`
-	Std10_0     *float64 `json:"pms_std10_0,omitempty"`
-	Count00_30  *uint32  `json:"pms_c00_30,omitempty"`
-	Count00_50  *uint32  `json:"pms_c00_50,omitempty"`
-	Count01_00  *uint32  `json:"pms_c01_00,omitempty"`
-	Count02_50  *uint32  `json:"pms_c02_50,omitempty"`
-	Count05_00  *uint32  `json:"pms_c05_00,omitempty"`
-	Count10_00  *uint32  `json:"pms_c10_00,omitempty"`
-	CountSecs   *uint32  `json:"pms_csecs,omitempty"`
-	Samples     *uint32  `json:"pms_csamples,omitempty"`
-	Pm01_0cf1   *float64 `json:"pms_pm01_0_cf1,omitempty"`
-	Pm02_5cf1   *float64 `json:"pms_pm02_5_cf1,omitempty"`
-	Pm10_0cf1   *float64 `json:"pms_pm10_0_cf1,omitempty"`
-	Model       *string  `json:"pms_model,omitempty"`
-	CardVoltage *float64 `json:"voltage,omitempty"`
-	CardTemp    *float64 `json:"temp,omitempty"`
-	AqiNotes    *string  `json:"aqi_notes,omitempty"`
-	AqiLevel    *string  `json:"aqi_level,omitempty"`
-	Aqi         *uint32  `json:"aqi,omitempty"`
+	Pm01_0     *float64 `json:"pms_pm01_0,omitempty"`
+	Pm02_5     *float64 `json:"pms_pm02_5,omitempty"`
+	Pm10_0     *float64 `json:"pms_pm10_0,omitempty"`
+	Std01_0    *float64 `json:"pms_std01_0,omitempty"`
+	Std02_5    *float64 `json:"pms_std02_5,omitempty"`
+	Std10_0    *float64 `json:"pms_std10_0,omitempty"`
+	Count00_30 *uint32  `json:"pms_c00_30,omitempty"`
+	Count00_50 *uint32  `json:"pms_c00_50,omitempty"`
+	Count01_00 *uint32  `json:"pms_c01_00,omitempty"`
+	Count02_50 *uint32  `json:"pms_c02_50,omitempty"`
+	Count05_00 *uint32  `json:"pms_c05_00,omitempty"`
+	Count10_00 *uint32  `json:"pms_c10_00,omitempty"`
+	CountSecs  *uint32  `json:"pms_csecs,omitempty"`
+	Samples    *uint32  `json:"pms_csamples,omitempty"`
+	Pm01_0cf1  *float64 `json:"pms_pm01_0_cf1,omitempty"`
+	Pm02_5cf1  *float64 `json:"pms_pm02_5_cf1,omitempty"`
+	Pm10_0cf1  *float64 `json:"pms_pm10_0_cf1,omitempty"`
+	Model      *string  `json:"pms_model,omitempty"`
+	AqiNotes   *string  `json:"pms_aqi_notes,omitempty"`
+	AqiLevel   *string  `json:"pms_aqi_level,omitempty"`
+	Aqi        *uint32  `json:"pms_aqi,omitempty"`
 }
 
 // Pms2 is for an auxiliary Plantower Air Sensor Data
@@ -135,13 +133,13 @@ type Pms2 struct {
 	Count10_00 *uint32  `json:"pms2_c10_00,omitempty"`
 	CountSecs  *uint32  `json:"pms2_csecs,omitempty"`
 	Samples    *uint32  `json:"pms2_csamples,omitempty"`
-	Pm01_0cf1  *float64 `json:"pms_pm01_0_cf1,omitempty"`
-	Pm02_5cf1  *float64 `json:"pms_pm02_5_cf1,omitempty"`
-	Pm10_0cf1  *float64 `json:"pms_pm10_0_cf1,omitempty"`
+	Pm01_0cf1  *float64 `json:"pms2_pm01_0_cf1,omitempty"`
+	Pm02_5cf1  *float64 `json:"pms2_pm02_5_cf1,omitempty"`
+	Pm10_0cf1  *float64 `json:"pms2_pm10_0_cf1,omitempty"`
 	Model      *string  `json:"pms2_model,omitempty"`
-	AqiNotes   *string  `json:"aqi_notes,omitempty"`
-	AqiLevel   *string  `json:"aqi_level,omitempty"`
-	Aqi        *uint32  `json:"aqi,omitempty"`
+	AqiNotes   *string  `json:"pms2_aqi_notes,omitempty"`
+	AqiLevel   *string  `json:"pms2_aqi_level,omitempty"`
+	Aqi        *uint32  `json:"pms2_aqi,omitempty"`
 }
 
 // Opc is for Alphasense OPC-N2 Air Sensor Data
@@ -160,12 +158,12 @@ type Opc struct {
 	Count10_00 *uint32  `json:"opc_c10_00,omitempty"`
 	CountSecs  *uint32  `json:"opc_csecs,omitempty"`
 	Samples    *uint32  `json:"opc_csamples,omitempty"`
-	Pm01_0cf1  *float64 `json:"pms_pm01_0_cf1,omitempty"`
-	Pm02_5cf1  *float64 `json:"pms_pm02_5_cf1,omitempty"`
-	Pm10_0cf1  *float64 `json:"pms_pm10_0_cf1,omitempty"`
-	AqiNotes   *string  `json:"aqi_notes,omitempty"`
-	AqiLevel   *string  `json:"aqi_level,omitempty"`
-	Aqi        *uint32  `json:"aqi,omitempty"`
+	Pm01_0cf1  *float64 `json:"opc,omitempty"`
+	Pm02_5cf1  *float64 `json:"opc_pm02_5_cf1,omitempty"`
+	Pm10_0cf1  *float64 `json:"opc_pm10_0_cf1,omitempty"`
+	AqiNotes   *string  `json:"opc_aqi_notes,omitempty"`
+	AqiLevel   *string  `json:"opc_aqi_level,omitempty"`
+	Aqi        *uint32  `json:"opc_aqi,omitempty"`
 }
 
 // Dev contains General Device Statistics
